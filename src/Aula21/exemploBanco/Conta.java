@@ -28,7 +28,7 @@ public class Conta {
             identificador += (char) aleatorio.nextInt(65, 90);
         }
         identificador += aleatorio.nextInt(1000, 2000);
-        this.Identificador = Identificador;
+        this.Identificador = identificador;
 
     }
     public boolean validaAcesso(String Identificador, String Senha){
@@ -47,9 +47,6 @@ public class Conta {
         Senha = Senha;
     }
 
-    public String getIdentificador() {
-        Identificador = Identificador;
-        return null;
-    }
+    public String getIdentificador() {return Identificador;}
     }
 
