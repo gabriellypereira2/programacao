@@ -5,22 +5,22 @@ public class Lista <T>{
     private int tamanho;
 
     public Lista(int capacidade){
-        elementos =(T[]) new Object[capacidade];
+       // elementos =(T[]) new Object[capacidade];
         tamanho = 0;
     }
 
     private void aumentaCapacidade(){
         if(tamanho==elementos.length){
             T[] aux = (T[]) new Object[tamanho * 2];
-            for(int i=0;i<tamanho;i++)
-                aux[i] = elementos[i];
-            elementos = aux;
+            for(int i=0;i<tamanho;i++);
+              //  aux[i] = elementos[i];
+            //elementos = aux;
         }
     }
 
     public void adiciona (T elemento){
         aumentaCapacidade();
-        elementos[tamanho++] = elemento;
+       // elementos[tamanho++] = elemento;
     }
 
     public void adiciona(int posicao, T elemento){
@@ -29,7 +29,7 @@ public class Lista <T>{
         aumentaCapacidade();
         for (int i = tamanho -1; i>=posicao; i--)
             elementos[i+1] = elementos[i];
-        elementos [posicao] = elemento;
+      //  elementos [posicao] = elemento;
         tamanho++;
     }
 
